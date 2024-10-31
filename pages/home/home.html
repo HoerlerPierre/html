@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Rock n' Roll</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="home.css">
+    </head>
+    <body>
+        <div class="overlay"></div>
+
+        <div>
+            <div>
+                <img id="image-anim" src="../../src/img/vinyle.png" class="vinyle">
+
+                <div class="div-right">
+                    <ul>
+                        <div class="espace">
+                            <li>
+                                <h1 class="clickable-text"
+                                 data-url="../redirect/albums/album.html" 
+                                 onclick="redirectAndHideAll(this)">
+                                 Classement de mes albums
+                                </h1>
+                            </li>
+                        </div>
+
+                        <div class="espace2">
+                            <li>
+                                <h1 class="clickable-text"
+                                data-url="../redirect/groupe/groupe.html" 
+                                onclick="redirectAndHideAll(this)">
+                                Classement de mes groupes
+                               </h1>
+                            </li>
+                        </div>
+
+                        <li>
+                            <h1 class="clickable-text"
+                            data-url="../redirect/musique/musique.html" 
+                            onclick="redirectAndHideAll(this)">
+                            Classement de mes musiques
+                            </h1>
+                        </li>
+
+                        <div class="espace2">
+                            <li>
+                                <h1 class="clickable-text"
+                                data-url="../redirect/guitare/guitare.html" 
+                                onclick="redirectAndHideAll(this)">
+                                Classement de mes guitares
+                                </h1>
+                            </li>
+                        </div>
+
+                        <div class="espace">
+                            <li>
+                                <h1 class="clickable-text"
+                                data-url="../redirect/guitare/guitare.html" 
+                                onclick="redirectAndHideAll(this)">
+                                comming soon
+                                </h1>
+                            </li>
+                        </div>
+                    </ul>
+
+                </div>
+
+                <div class="div-cnt">
+
+                </div>
+
+            </div>
+        </div>
+
+        <script>
+            function redirectAndHideAll(clickedElement) {
+
+                const allTexts = document.querySelectorAll('.clickable-text');
+                allTexts.forEach(element => element.style.display = 'none');
+                
+                const image = document.getElementById('image-anim');
+                image.classList.add('move-right');
+
+                const url = clickedElement.getAttribute('data-url');
+
+                setTimeout(() => {
+                    window.location.href = url;
+                }, 3000);
+            }
+        </script>
+    </body>
+</html>

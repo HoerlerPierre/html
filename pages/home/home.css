@@ -1,0 +1,131 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;    
+ }
+
+/*
+>-------------<
+|image de fond|
+>-------------<
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('/src/img/bckrndhome.png') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+}
+
+/*
+>-----------<
+|menu vinyle|
+>-----------<
+*/
+
+.vinyle {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    height: 120%;
+    width: auto; 
+    margin-top: -60vh;
+}
+
+/*
+>------------<
+|liste vinyle|
+>------------<
+*/
+
+/*
+div et placement
+*/
+.espace{
+    position: relative;
+    left: 5%;
+}
+
+.espace2{
+    position: relative;
+    left: 2%;
+}
+
+.div-right {
+    position: absolute;
+    top: 33vh;
+    right: 0vh;
+    height: 45%;
+    width: 70vh;
+    display: flex;
+    align-items: stretch; 
+}
+
+
+.div-cnt {
+    position: absolute;
+    top: 80vh;
+    right: 5vh;
+    height: 15%;
+    width: 50vh;
+    display: flex;
+    align-items: stretch; 
+
+}
+
+/*
+liste
+*/
+h1 {
+    font-size: calc(1.2vw + 1.2vh); 
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    cursor: pointer;
+    transition: opacity 0.5s ease;
+}
+
+h1:hover {
+    font-size: calc(1.3vw + 1.3vh); 
+    color: rgb(253, 253, 253);
+}
+
+.liste {
+    position: absolute;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    width: 100%;
+}
+
+li {
+    list-style-type: none;
+    color: white;
+    margin-bottom: 3vh;
+}
+
+/*
+>-------------<
+|class pour js|
+>-------------<
+*/
+
+.clickable-text {
+    cursor: pointer;
+    color: rgb(136, 136, 136);
+}
+
+#image-anim { 
+    transition: transform 3s;
+}
+
+.move-right {
+    transform: translateX(300px);
+}
